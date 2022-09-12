@@ -1,0 +1,84 @@
+@use'_variables.scss';
+
+body {
+    margin: 0;
+    color: #797E81;
+    font-family: variables.$font;
+}
+
+#header {
+    background-image: url(../images/bank.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#image {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    margin: 50px;
+    flex-wrap: wrap;
+}
+
+#job {
+    background-color: variables.$mid-gray;
+    padding: 10px;
+    margin-right: 100px;
+}
+
+#name {
+    @extend #job;
+    font-size: xx-large;
+}
+
+
+#nameJob {
+    color: rgb(208, 208, 208);
+    font-family: variables.$font;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#content {
+    display: flex;
+}
+
+@mixin margin {
+    margin-left: variables.$margin;
+    margin-right: variables.$margin;
+}
+
+#right div {
+    @include margin;
+}
+
+#left {
+    width: 33.3333333%;
+    @include margin;
+}
+
+#right {
+    width: 66.6666666%;
+    background-color: #EFEFEF;
+    
+}
+
+#subtitle {
+    border-bottom: variables.$mid-gray solid 7px;
+    padding-bottom: 20px;
+    width: 25%;
+    letter-spacing: 6px;
+}
+
+
+
+#small {
+    font-size: small;
+    margin: 0;
+}
